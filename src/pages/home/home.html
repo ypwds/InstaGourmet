@@ -1,17 +1,230 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>InstaGourmet</ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+
+    <ion-scroll scrollX="true" text-nowrap margin-top>
+        <div class="story" text-center *ngFor="let story of stories; let index = index"
+            [ngClass]="!story.seen ? 'unseen' : ''">
+            <img [src]="story.userPicture" [alt]="'Story de' + story.userName">
+
+            <span class="block">{{ story.userName }}</span>
+        </div>
+    </ion-scroll>
+
+    <ion-card>
+        <img src="https://i.ytimg.com/vi/FrdumyhYaZY/maxresdefault.jpg" />
+        <ion-card-content>
+            <ion-card-title>
+                Lasanha à Bolonhesa Saborosa
+            </ion-card-title>
+            <p>
+                Lasanha com molho bolonhesa e molho branco, feitos com com MAGGI Caldo de Carne e Creme
+                de Leite NESTLÉ.
+            </p>
+        </ion-card-content>
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="heart"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="chatbubbles"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="send"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-right>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="bookmark"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+    <ion-card>
+        <img
+            src="https://d1uz88p17r663j.cloudfront.net/resized/f04891a7d373c20de683d466d0ea13a8_arroz-grega-receitas-nestle_1200_600.jpg" />
+        <ion-card-content>
+            <ion-card-title>
+                Arroz à Grega
+            </ion-card-title>
+            <p>
+                Arroz com MAGGI Caldo de Galinha, cenoura, uva- passa e pimentões vermelho e verde.
+            </p>
+        </ion-card-content>
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="heart"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="chatbubbles"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="send"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-right>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="bookmark"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+    <ion-card>
+        <img
+            src="https://d1uz88p17r663j.cloudfront.net/resized/e121cacba327673a856b3bf83fd684a4_baiao-dois-tradicional-receitas-nestle_1200_600.jpg" />
+        <ion-card-content>
+            <ion-card-title>
+                Baião de Dois Tradicional
+            </ion-card-title>
+            <p>
+                Arroz cozido com feijão de corda, temperado com MAGGI® Tempero e Sabor Feijão, e queijo
+                coalho derretido.
+            </p>
+        </ion-card-content>
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="heart"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="chatbubbles"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="send"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-right>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="bookmark"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+    <ion-card>
+        <img
+            src="https://d1uz88p17r663j.cloudfront.net/resized/caccf387fb351f56a45dcb1296c8a6ba_Shake-de-frutas-vermelhas-receitas-nestle_1200_600.jpg" />
+        <ion-card-content>
+            <ion-card-title>
+                Shake de Frutas Vermelhas e Vanilla
+            </ion-card-title>
+            <p>
+                Bebida gelada de frutas vermelhas e NUTREN Beauty Vanilla.
+            </p>
+        </ion-card-content>
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="heart"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="chatbubbles"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="send"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-right>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="bookmark"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+    <ion-card>
+        <img
+            src="https://d1uz88p17r663j.cloudfront.net/resized/f1f81c0fd3f6e2a01d55747f100addc1_frango-curry-arroz-integral-receitas-nestle_1200_600.jpg" />
+        <ion-card-content>
+            <ion-card-title>
+                Frango ao Curry com Arroz Integral
+            </ion-card-title>
+            <p>
+                Cubos de frango temperado com MAGGI Tempero e Sabor para Aves.
+            </p>
+        </ion-card-content>
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="heart"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="chatbubbles"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="send"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-right>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="bookmark"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+    <ion-card>
+        <img
+            src="https://d1uz88p17r663j.cloudfront.net/resized/9f7eca5aaea51b25bc5c671f5188c202_bolo-trufa-chocolate-receitas-nestle_1200_600.jpg" />
+        <ion-card-content>
+            <ion-card-title>
+                Bolo Trufa de Chocolate
+            </ion-card-title>
+            <p>
+                Feito com ovos, açúcar, Leite Líquido NINHO Forti+ Integral, farinha de trigo, Chocolate em Pó NESTLÉ
+                DOIS FRADES, fermento em pó, Cobertura de Chocolate ao Leite Garoto, manteiga, Nestlé Creme de Leite e
+                conhaque.
+            </p>
+        </ion-card-content>
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="heart"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="chatbubbles"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-left>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="send"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-right>
+                <button ion-button clear small color="dark" icon-start>
+                    <ion-icon name="bookmark"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
 </ion-content>
